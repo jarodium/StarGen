@@ -12,11 +12,6 @@ CFLAGS = -O -g -W -Wall -D_USE_LIBM_MATH_H
 
 CFLAGS += -Wno-long-double
 
-# StarGen comes with a copy of World Benders' portable memory checker, Dumas
-# If you're debugging StarGen, you may want to uncomment the following line:
-
-#CFLAGS += -DMEMORY_CHECK=1
-
 OBJDIR = obj
 OBJS = main.o stargen.o accrete.o display.o enviro.o utils.o
 
