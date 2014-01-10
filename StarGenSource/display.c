@@ -434,7 +434,6 @@ void csv_describe_system(FILE *file, planet_pointer innermost_planet, int do_gas
 
 void csv_thumbnails(FILE*	file, 
 					char*	url_path,
-					char*	subdir,
 					char*	file_name,
 					char*	csv_url)
 {
