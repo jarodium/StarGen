@@ -7,10 +7,6 @@
 # And change this to your fvorite C compiler flags:
 CFLAGS = -O -g -W -Wall -D_USE_LIBM_MATH_H
 
-# We use a lot of long doubles and Mac OS X currently warns you that they're
-# thinking about changing these from 64 to 128 bits. To suppress that warning:
-CFLAGS += -Wno-long-double
-
 OBJS = main.o stargen.o accrete.o display.o enviro.o utils.o
 
 LIBS = -lm
