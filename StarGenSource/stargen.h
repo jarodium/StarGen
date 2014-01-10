@@ -54,16 +54,16 @@ int stargen (actions		action,			// One of the above
 #define fOnlyEarthlike			0x0800
 
 										// Values of out_format
-#define	ffHTML				'HTML'
-#define	ffTEXT				'TEXT'
-#define	ffCELESTIA			'.SSC'
-#define ffCSV				'.CSV'
-#define ffCSVdl				'+CSV'
-#define ffSVG				'.SVG'
+#define	ffHTML				0
+#define	ffTEXT				1
+#define	ffCELESTIA			2
+#define ffCSV				3
+#define ffCSVdl				4
+#define ffSVG				5
 
 										// Values of graphic_format
-#define	gfGIF				'.GIF'
-#define gfSVG				'.SVG'
+#define	gfGIF				6
+#define gfSVG				7
 
 										// The two predefined star catalogs.
 extern catalog	solstation;
