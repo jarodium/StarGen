@@ -114,7 +114,7 @@ void update_dust_lanes(long double min, long double max, long double mass,
 			node2 = (dust *)malloc(sizeof(dust));
 			node2->inner_edge = min;
 			node2->outer_edge = max;
-			if ((node1->gas_present == TRUE))
+			if (node1->gas_present == TRUE)
 				node2->gas_present = gas;
 			else 
 				node2->gas_present = FALSE;
@@ -141,7 +141,7 @@ void update_dust_lanes(long double min, long double max, long double mass,
 				node2->inner_edge = max;
 				node1->next_band = node2;
 				node1->outer_edge = max;
-				if ((node1->gas_present == TRUE))
+				if (node1->gas_present == TRUE)
 					node1->gas_present = gas;
 				else 
 					node1->gas_present = FALSE;
@@ -154,7 +154,7 @@ void update_dust_lanes(long double min, long double max, long double mass,
 					node2 = (dust *)malloc(sizeof(dust));
 					node2->next_band = node1->next_band;
 					node2->dust_present = FALSE;
-					if ((node1->gas_present == TRUE))
+					if (node1->gas_present == TRUE)
 						node2->gas_present = gas;
 					else 
 						node2->gas_present = FALSE;
@@ -167,7 +167,7 @@ void update_dust_lanes(long double min, long double max, long double mass,
 				else 
 					if (((node1->inner_edge >= min) && (node1->outer_edge <= max)))
 					{
-						if ((node1->gas_present == TRUE))
+						if (node1->gas_present == TRUE)
 							node1->gas_present = gas;
 						node1->dust_present = FALSE;
 						node1 = node1->next_band;
@@ -226,11 +226,11 @@ long double collect_dust(long double last_mass, long double *new_dust,
 	if ((r_inner < 0.0))
 		r_inner = 0.0;
 	
-	if ((dust_band == NULL))
+	if (dust_band == NULL)
 		return(0.0);
 	else 
 	{
-		if ((dust_band->dust_present == FALSE))
+		if (dust_band->dust_present == FALSE)
 			temp_density = 0.0;
 		else 
 			temp_density = dust_density;
@@ -553,7 +553,7 @@ void coalesce_planetesimals(long double a, long double e, long double mass, long
 		else 
 			the_planet->gas_giant = FALSE;
 		
-		if ((planet_head == NULL))
+		if (planet_head == NULL)
 		{
 			planet_head = the_planet;
 			the_planet->next_planet = NULL;
@@ -563,7 +563,7 @@ void coalesce_planetesimals(long double a, long double e, long double mass, long
 			the_planet->next_planet = planet_head;
 			planet_head = the_planet;
 		}
-		else if ((planet_head->next_planet == NULL))
+		else if (planet_head->next_planet == NULL)
 		{
 			planet_head->next_planet = the_planet;
 			the_planet->next_planet = NULL;

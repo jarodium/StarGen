@@ -708,7 +708,7 @@ void generate_planet(planet_pointer	planet,
 													   planet->radius,
 													   planet->surf_grav);
 
-			if ((planet->surf_pressure == 0.0))
+			if (planet->surf_pressure == 0.0)
 				planet->boil_point 			= 0.0;
 			else 
 				planet->boil_point 			= boiling_point(planet->surf_pressure);
