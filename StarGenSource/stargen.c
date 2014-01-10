@@ -15,7 +15,9 @@
 #include	<time.h>
 #include	<ctype.h>
 
+#ifdef WIN32
 #pragma warning (disable: 4048) // Hush compiler - don't complain about storing specific arrays in generic pointers
+#endif
 
 #include	"const.h"
 #include	"structs.h"
